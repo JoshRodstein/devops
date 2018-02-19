@@ -1,0 +1,27 @@
+---
+driver:
+  name: vagrant
+
+provisioner:
+  name: ansible_playbook
+  require_chef_for_busser: false
+
+platforms:
+  - name: centos-7.2
+
+verifier:
+  name: inspec
+
+suites:
+  - name: gitlab
+    provisioner:
+      playbook: gitlab.yml
+    driver:
+      network:
+        - ['private_network', {ip: '172.20.10.10'}]
+      customize:
+        memory: 2048
+        cpus: 1
+    verifier:
+      inspec_tests:
+        - test/smoke/gitlab
