@@ -5,7 +5,11 @@ driver:
 provisioner:
   name: ansible_playbook
   require_chef_for_busser: false
+  hosts: localhost
 
+transport:
+  max_ssh_sessions: 6
+  
 platforms:
   - name: centos-7.2
 
