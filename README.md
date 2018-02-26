@@ -17,3 +17,7 @@ create .kitchen.yml file
 `kitchen create`
 
 `kitchen destroy`
+
+## Ansible Dependencies
+
+`ansible-galaxy install -r requirements.yml`

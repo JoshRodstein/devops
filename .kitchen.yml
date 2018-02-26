@@ -9,7 +9,7 @@ provisioner:
 
 transport:
   max_ssh_sessions: 6
-  
+
 platforms:
   - name: centos-7.2
 
@@ -24,7 +24,7 @@ suites:
       network:
         - ['private_network', {ip: '172.20.10.10'}]
       customize:
-        memory: 2048
+        memory: 1024
         cpus: 1
     verifier:
       inspec_tests:
