@@ -1,0 +1,6 @@
+- name: gitlab install
+  hosts: all
+  remote_user: root
+
+  roles:
+    - fucking-gitlab
